@@ -1,5 +1,5 @@
 {
-  "name": "codejam-q3",
+  "name": "checker-puzzle",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
@@ -28,5 +28,13 @@
     "webpack-cli": "^4.10.0",
     "webpack-dev-server": "^4.10.0"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jerubrin/puzzle-checker.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jerubrin/puzzle-checker/issues"
+  },
+  "homepage": "https://github.com/jerubrin/puzzle-checker#readme",
   "description": ""
 }
