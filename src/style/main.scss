@@ -7,6 +7,7 @@ body {
     display: flex;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     color: #2d6e6b;
+    padding: 20px 0;
 }
 
 .container {
@@ -20,6 +21,17 @@ body {
     align-items: center;
     padding: 30px;
     border-radius: 25px;
+    @media screen and (max-width: 690px) {
+        max-width: 500px;
+    }
+    @media screen and (max-width: 500px) {
+        max-width: 420px;
+        padding: 20px;
+    }
+    @media screen and (max-width: 440px) {
+        max-width: 300px;
+        padding: 10px;
+    }
 }
 
 .grid{
@@ -37,6 +49,18 @@ body {
 .element {
     width: 70px;
     height: 70px;
+    @media screen and (max-width: 690px) {
+        width: 55px;
+        height: 55px;
+    }
+    @media screen and (max-width: 500px) {
+        width: 45px;
+        height: 45px;
+    }
+    @media screen and (max-width: 440px) {
+        width: 32px;
+        height: 32px;
+    }
     input {
         width: 60px;
         height: 60px;
@@ -48,6 +72,23 @@ body {
         background: linear-gradient(48deg, rgba(255,255,255,1) 0%, rgba(241,241,255,1) 41%, rgba(239,252,255,1) 100%);
         box-shadow: #2d6e6b 1px 1px 4px 0px;
         color: #1d4644;
+        @media screen and (max-width: 690px) {
+            width: 50px;
+            height: 50px;
+        }
+        @media screen and (max-width: 500px) {
+            width: 40px;
+            height: 40px;
+            font-size: 18px;
+            padding: 6px;
+            border-radius: 4px;
+        }
+        @media screen and (max-width: 440px) {
+            width: 29px;
+            height: 29px;
+            font-size: 14px;
+            padding: 4px;
+        }
     }
 }
 
@@ -55,6 +96,15 @@ h1 {
     font-size: 2rem;
     margin-bottom: 10px;
     text-transform: uppercase;
+    @media screen and (max-width: 690px) {
+        font-size: 1.8rem;
+    }
+    @media screen and (max-width: 500px) {
+        font-size: 1.5rem;
+    }
+    @media screen and (max-width: 440px) {
+        font-size: 1.3rem;
+    }
 }
 
 h2 {
@@ -62,7 +112,23 @@ h2 {
     text-align: center;
     margin-bottom: 12px;
     font-size: .8rem;
+    @media screen and (max-width: 690px) {
+        font-size: .7rem;
+    }
+    @media screen and (max-width: 500px) {
+        font-size: .6.5rem;
+    }
+    @media screen and (max-width: 440px) {
+        font-size: .6rem;
+    }
 }
+
+.h2-3 {max-width: calc(70px * 3);}
+.h2-4 {max-width: calc(70px * 4);}
+.h2-5 {max-width: calc(70px * 5);}
+.h2-6 {max-width: calc(70px * 6);}
+.h2-7 {max-width: calc(70px * 7);}
+.h2-8 {max-width: calc(70px * 8);}
 
 h3 {
     text-align: center;
@@ -95,6 +161,22 @@ button {
     border-radius: 12px;
     margin-top: 10px;
     background: #81e7e2;
+    @media screen and (max-width: 690px) {
+        width: 180px;
+        height: 40px;
+    }
+    @media screen and (max-width: 500px) {
+        width: 160px;
+        height: 35px;
+        border-radius: 10px;
+        font-size: 1.2rem;
+    }
+    @media screen and (max-width: 440px) {
+        width: 150px;
+        height: 32px;
+        border-radius: 6px;
+        font-size: 1rem;
+    }
     &:hover {
         background: #a5f7f3;
     }
@@ -110,6 +192,15 @@ button {
     font-size: 2.2rem;
     font-family: 'Courier New', Courier, monospace;
     color: #2d6e6b;
+    @media screen and (max-width: 690px) {
+        font-size: 2rem;
+    }
+    @media screen and (max-width: 500px) {
+        font-size: 1.6rem;
+    }
+    @media screen and (max-width: 440px) {
+        font-size: 1.5rem;
+    }
 }
 
 .is-good {
@@ -119,6 +210,15 @@ button {
     font-size: 2.2rem;
     font-family: 'Courier New', Courier, monospace;
     color: #168a22;
+    @media screen and (max-width: 690px) {
+        font-size: 2rem;
+    }
+    @media screen and (max-width: 500px) {
+        font-size: 1.6rem;
+    }
+    @media screen and (max-width: 440px) {
+        font-size: 1.5rem;
+    }
 }
 
 .is-bad {
@@ -128,4 +228,13 @@ button {
     font-size: 2.2rem;
     font-family: 'Courier New', Courier, monospace;
     color: #f54646;
+    @media screen and (max-width: 690px) {
+        font-size: 2rem;
+    }
+    @media screen and (max-width: 500px) {
+        font-size: 1.6rem;
+    }
+    @media screen and (max-width: 440px) {
+        font-size: 1.5rem;
+    }
 }

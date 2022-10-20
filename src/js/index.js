@@ -47,6 +47,7 @@ function createVisual() {
     const _title = document.createElement('h1')
     _title.textContent = 'Проверка пазла'
     const _subTitle = document.createElement('h2')
+    _subTitle.classList.add(`h2-${currentSize}`)
     _subTitle.innerHTML = 'Введите цифры на свои места (пустое поле в пазле можно оставить пустым или заполнить нулем)<br>После заполнения - нажмите кнопку "ПРОВЕРИТЬ"" и получите результат!<br>Не гарантируется корректная работа при неверном заполнении пазла, заполняйте пазл верно'
 
     const _sizes = document.createElement('div')
@@ -96,9 +97,13 @@ function checkThisPuzzle(e) {
     try {e.preventDefault() } catch (er) {return}
     setAllToArray()
     clearAnswer()
+    
+    let checkFirst = checkGameArrayFirst()
     let check = checkGameArray()
     let checkStr = check ? 'решаемый!' : 'не решаемый!'
     let checkClass = check ? 'is-good' : 'is-bad'
+    checkStr = checkFirst ? checkStr : 'эй... не надо так'
+    checkClass = checkFirst ? checkClass : 'is-bad'
 
     _answer.textContent = checkStr
     _answer.classList.add(checkClass)
@@ -133,3 +138,11 @@ function clearAnswer() {
 }
 
 createVisual()
+
+function checkGameArrayFirst() {
+    let isRightPuzzles = true
+    for(let i = 0; i < currentSize*currentSize; i++) {
+        isRightPuzzles &&= arr.flat().reduce((w, c) => w || c == i, false)
+    }
+    return isRightPuzzles
+}
